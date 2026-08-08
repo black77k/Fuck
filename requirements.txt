@@ -1,8 +1,0 @@
-python-telegram-bot[job-queue]==21.4
-requests
-pandas
-numpy
-ta
-ccxt
-mplfinance
-matplotlib
