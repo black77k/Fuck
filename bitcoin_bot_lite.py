@@ -61,7 +61,7 @@ from telegram.ext import (
 # ══════════════════════════════════════════════════════════════════
 #  الإعدادات العامة
 # ══════════════════════════════════════════════════════════════════
-BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "ضع_التوكن_هنا")
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8789888929:AAE29y-R7t8ToIUiVxJ5Kw_SyzSbxt-aWoQا")
 
 SYMBOL = "BTC/USDT"
 TIMEFRAME = "1h"          # الشمعة الواحدة = ساعة
