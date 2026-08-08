@@ -61,7 +61,13 @@ from telegram.ext import (
 # ══════════════════════════════════════════════════════════════════
 #  الإعدادات العامة
 # ══════════════════════════════════════════════════════════════════
-BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8789888929:AAE29y-R7t8ToIUiVxJ5Kw_SyzSbxt-aWoQا")
+# ══════════════════════════════════════════════════════════════════
+#  ⬇️⬇️⬇️  ضع توكن البوت هنا فقط (سطر واحد) — أو اتركه فاضي واستخدم
+#  متغير البيئة TELEGRAM_BOT_TOKEN من Railway (الطريقة الأأمن) ⬇️⬇️⬇️
+# ══════════════════════════════════════════════════════════════════
+BOT_TOKEN_MANUAL = "8789888929:AAE29y-R7t8ToIUiVxJ5Kw_SyzSbxt-aWoQ"   # مثال: "8789888929:AAE29y-R7t8ToIUiVxJ5Kw_SyzSbxt-aWoQ"
+
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN") or BOT_TOKEN_MANUAL
 
 SYMBOL = "BTC/USDT"
 TIMEFRAME = "1h"          # الشمعة الواحدة = ساعة
@@ -637,8 +643,8 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
 #  نقطة التشغيل
 # ══════════════════════════════════════════════════════════════════
 def main():
-    if BOT_TOKEN == "8789888929:AAE29y-R7t8ToIUiVxJ5Kw_SyzSbxt-aWoQ":
-        raise SystemExit("ضع توكن البوت بمتغير البيئة TELEGRAM_BOT_TOKEN قبل التشغيل.")
+    if not BOT_TOKEN:
+        raise SystemExit("لم يتم ضبط متغير البيئة TELEGRAM_BOT_TOKEN. أضفه من تبويب Variables في Railway.")
 
     app = Application.builder().token(BOT_TOKEN).build()
 
