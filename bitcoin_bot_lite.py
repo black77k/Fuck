@@ -461,7 +461,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         "for performance reasons.\n\n"
         "This is an educational bot for teaching Object Detection & "
         "Computer Vision.\n\n"
-        "🤖 Bot developed by @usta77k"
+        "🤖 Bot developed by @Berkocan77k"
     )
 
 
